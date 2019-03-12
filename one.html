@@ -12,36 +12,33 @@ and Scalably Share Clinical Data.
 </head>
 
 <body> 
+ <BR>
 <a href="https://www.sciencedirect.com/science/article/pii/S2001037018300370?via%3Dihub">FHIRChain: Applying Blockchain to Securely
 and Scalably Share Clinical Data. </a>
-
- 
-<p>Here are my comments on the Vanderbilt paper, FHIRChain: Applying Blockchain to Securely
+<BR> 
+Here are my comments on the Vanderbilt paper, FHIRChain: Applying Blockchain to Securely
 and Scalably Share Clinical Data. 
-
+<BR>
 Their Basic Question: is it feasible to use blockchain technologies to securely and scalably share healthcare data for improving collaborative clinical decision support?
-
+<BR>
 Their focus is on building a collaborative platform for reviewing tumor data. I think they envision a group of providers all sharing access to a patients data as a care team. The key is that this team could be widely distributed around the globe and hence the need for a secure shared platform. 
-
+<BR>
 They are assuming there will be miners to authenticate the blocks. I think that’s a flaw. We seem to be moving in the direction of a permissioned blockchain and I think that makes more sense for a private blockchain. Although part of their reasoning was to open the platform to as wide a user base as possible and they’ve already decided that their next effort will be on a permissioned blockchain. 
-
+<BR>
 Their solution for handling patient identifiers seems flawed, but it’s so vague I can’t tell for sure. Their access control for providers was based on public keys.  
-
+<BR>
 They are using the DApp to control access to specific parts of the patient record, and generate audit and log data.  
-
+<BR>
 They are relying on FHIR as the common language across consumers of the data. 
-
+<BR>
 They also settled on a hybrid of on chain and off chain storage of data. And assumed that small edits to the off chain data were “not a problem”. I think that breaks immutability and they kind of hand waved their way around it. We need to be more rigorous. It’s a serious concern and needs to be addressed. 
-
+<BR>
 Careful use of hash values could solve the off-chain edit problem. 
-
+<BR>
 They tried to solve the problem of erroneous data on the block chain with an MVC architecture but that’s not really a solution it’s an architecture. The fundamental problem remains: what do I do with erroneous data on the chain? If I add a corrected block later on, how do I tell consumers of the data that I did that? Do they have to keep checking or keep a separate list of “changed” blocks? Yuck. 
-
+<BR>
 They were very good about drawing clear lines between the ONC requirements for a “Shared Nationwide Interoperability Roadmap" and their design. I really liked that part. 
- 
+<BR> 
 
-
-
-</p>
 </body>
 </html>
